@@ -1,6 +1,11 @@
 import players from "./config/characters.js";
 import { playRaceEngine } from "./services/raceService.js";
 
+const state = {
+    player1: null,
+    player2: null,
+};
+
 
 // =================== MODIFICAÇÃO 2: Criar função de seleção aleatória ===================
 async function selectRandomPlayers() {

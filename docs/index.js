@@ -44,17 +44,6 @@ const state = {
     player2: null,
 };
 
-async function main() {
-    console.log("🏁 Corrida entre Mario e Bowser começando...\n");
-    
-    // Define os jogadores para a corrida
-    state.player1 = players.Mario;
-    state.player2 = players.Bowser;
-
-    // A lógica da corrida virá aqui
-    
-    // A lógica do vencedor virá aqui
-}
 
 async function rollDice() {
     return Math.floor(Math.random() * 6) + 1;
@@ -155,7 +144,7 @@ async function playRaceEngine(player1, player2) {
     }
 }
 
-async function main() {
+(async function main() {
     console.log("🏁 Corrida entre Mario e Bowser começando...\n");
 
     state.player1 = players.Mario;
@@ -183,4 +172,4 @@ async function main() {
     } else {
         console.log("\nA corrida terminou em empate!");
     }
-};
+})();

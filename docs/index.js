@@ -157,11 +157,30 @@ async function playRaceEngine(player1, player2) {
 
 async function main() {
     console.log("🏁 Corrida entre Mario e Bowser começando...\n");
-    
+
     state.player1 = players.Mario;
     state.player2 = players.Bowser;
 
     await playRaceEngine(state.player1, state.player2);
 
-    // A lógica do vencedor virá aqui
+    console.log("\n----------------------------------------");
+    console.log("Resultado final:");
+
+    let player1Name = "Mario"; // Simples para o log
+    let player2Name = "Bowser";
+    
+    // Usando operador ternário para "ponto" ou "pontos"
+    let p1_score_text = state.player1.pontos === 1 ? "ponto" : "pontos";
+    let p2_score_text = state.player2.pontos === 1 ? "ponto" : "pontos";
+
+    console.log(`${player1Name}: ${state.player1.pontos} ${p1_score_text}`);
+    console.log(`${player2Name}: ${state.player2.pontos} ${p2_score_text}`);
+    
+    if (state.player1.pontos > state.player2.pontos) {
+        console.log(`\n🏆 ${player1Name} venceu a corrida! Parabéns!`);
+    } else if (state.player2.pontos > state.player1.pontos) {
+        console.log(`\n🏆 ${player2Name} venceu a corrida! Parabéns!`);
+    } else {
+        console.log("\nA corrida terminou em empate!");
+    }
 };

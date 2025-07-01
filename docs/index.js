@@ -60,4 +60,50 @@ async function rollDice() {
     return Math.floor(Math.random() * 6) + 1;
 }
 
-main();
+async function getRandomBlock() {
+    let random = Math.random();
+    let result;
+
+    switch (true) {
+        case random < 0.33:
+            result = "RETA";
+            break;
+        case random < 0.66:
+            result = "CURVA";
+            break;
+        default:
+            result = "CONFRONTO";
+    }
+
+    return result;
+}
+
+async function playRaceEngine(player1, player2) {
+    for (let round = 1; round <= 5; round++) {
+        console.log(`🏁 Rodada ${round}`);
+        
+        let block = await getRandomBlock();
+        console.log(`Bloco: ${block}`);
+
+        // Rolar os dados
+        let diceResult1 = await rollDice();
+        let diceResult2 = await rollDice();
+
+        // Lógica de habilidade
+        let totalTestSkill1 = 0;
+        let totalTestSkill2 = 0;
+
+        // O código de cada bloco virá aqui...
+    }
+}
+
+async function main() {
+    console.log("🏁 Corrida entre Mario e Bowser começando...\n");
+    
+    state.player1 = players.Mario;
+    state.player2 = players.Bowser;
+
+    await playRaceEngine(state.player1, state.player2);
+
+    // A lógica do vencedor virá aqui
+};

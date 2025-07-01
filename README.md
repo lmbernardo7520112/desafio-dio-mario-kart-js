@@ -8,4 +8,5 @@ Simulação de corridas inspirada no universo **Mario Kart**, utilizando lógica
 
 ## 🔗 Acesse a versão visual
 
-👉 [Visualizar no GitHub Pages](https://lmbernardo7520112.github.io/mario-kart-js/)](https://www.linkedin.com/in/leonardo-maximino-devdata/)
+👉 👉 [Visualizar no GitHub Pages](https://lmbernardo7520112.github.io/desafio-dio-mario-kart-js/)
+(https://www.linkedin.com/in/leonardo-maximino-devdata/)

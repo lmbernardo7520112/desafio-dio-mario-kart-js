@@ -1,31 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Desafio Mario Kart.JS</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img src="./docs/header.gif" alt="Mario Kart" />
+  <section class="intro">
+    <img src="./docs/header.gif" alt="Mario Kart">
     <div>
-      <h1>Desafio de Projeto: Mario Kart.JS</h1>
-      <p><strong>Objetivo:</strong> Simular as mecânicas de corrida de Mario Kart com lógica de jogo baseada em atributos e sorteios aleatórios.</p>
+      <h1>Desafio de Projeto do Felipão: Mario Kart.JS</h1>
+      <p><strong>Objetivo:</strong> Mario Kart é uma série de jogos de corrida desenvolvida e publicada pela Nintendo. Nosso desafio é criar a lógica de um jogo que simule corridas entre personagens, respeitando atributos e regras do jogo.</p>
     </div>
-  </header>
+  </section>
 
-  <div class="container">
-    <h2>Personagens</h2>
-    <div class="players">
-      <!-- Personagens aqui, como no código anterior -->
+  <h2>Players</h2>
+  <section class="characters">
+    <div class="character">
+      <p>Mario</p>
+      <img src="./docs/mario.gif" alt="Mario">
+      <p>Velocidade: 4</p>
+      <p>Manobrabilidade: 3</p>
+      <p>Poder: 3</p>
     </div>
+    <div class="character">
+      <p>Peach</p>
+      <img src="./docs/peach.gif" alt="Peach">
+      <p>Velocidade: 3</p>
+      <p>Manobrabilidade: 4</p>
+      <p>Poder: 2</p>
+    </div>
+    <div class="character">
+      <p>Yoshi</p>
+      <img src="./docs/yoshi.gif" alt="Yoshi">
+      <p>Velocidade: 2</p>
+      <p>Manobrabilidade: 4</p>
+      <p>Poder: 3</p>
+    </div>
+    <div class="character">
+      <p>Bowser</p>
+      <img src="./docs/bowser.gif" alt="Bowser">
+      <p>Velocidade: 5</p>
+      <p>Manobrabilidade: 2</p>
+      <p>Poder: 5</p>
+    </div>
+    <div class="character">
+      <p>Luigi</p>
+      <img src="./docs/luigi.gif" alt="Luigi">
+      <p>Velocidade: 3</p>
+      <p>Manobrabilidade: 4</p>
+      <p>Poder: 4</p>
+    </div>
+    <div class="character">
+      <p>Donkey Kong</p>
+      <img src="./docs/dk.gif" alt="Donkey Kong">
+      <p>Velocidade: 2</p>
+      <p>Manobrabilidade: 2</p>
+      <p>Poder: 5</p>
+    </div>
+  </section>
 
-    <div class="checkbox-section">
-      <h3>🕹️ Regras & Mecânicas</h3>
-      <!-- Regras aqui -->
+  <h3>🎮 Regras & Mecânicas</h3>
+  <section class="rules">
+    <div>
+      <input type="checkbox" id="jogadores-item">
+      <label for="jogadores-item">O computador deve receber dois personagens para disputar a corrida em um objeto cada</label>
     </div>
-  </div>
+    <div>
+      <b>Pistas:</b>
+      <ul>
+        <li><input type="checkbox" id="pistas-1-item"> <label for="pistas-1-item">Corrida em pista aleatória com 5 rodadas</label></li>
+        <li><input type="checkbox" id="pistas-2-item"> <label for="pistas-2-item">Cada rodada sorteia: reta, curva ou confronto</label>
+          <ul>
+            <li><input type="checkbox" id="pistas-2-1-item"> <label for="pistas-2-1-item">Reta: dado + velocidade. Ganha 1 ponto</label></li>
+            <li><input type="checkbox" id="pistas-2-2-item"> <label for="pistas-2-2-item">Curva: dado + manobrabilidade. Ganha 1 ponto</label></li>
+            <li><input type="checkbox" id="pistas-2-3-item"> <label for="pistas-2-3-item">Confronto: dado + poder. Quem perder, perde 1 ponto</label></li>
+            <li><input type="checkbox" id="pistas-2-4-item"> <label for="pistas-2-4-item">Pontuação não pode ser negativa</label></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <input type="checkbox" id="vitoria-item">
+      <label for="vitoria-item">Vence quem tiver mais pontos ao final</label>
+    </div>
+  </section>
 </body>
 </html>
 
